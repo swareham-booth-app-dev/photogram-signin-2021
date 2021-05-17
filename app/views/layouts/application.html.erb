@@ -14,6 +14,18 @@
     <%= stylesheet_link_tag    'application', media: 'all' %>
   </head>
 
+   <% if notice.present? %>
+    <div style="border: thin green solid;" >
+      <%= notice %>
+    </div>
+  <% end %>
+
+  <% if alert.present? %>
+    <div style="border: thin red solid;">
+      <%= alert %>
+    </div>
+  <% end %>
+
   <body>
     <%= yield %>
   </body>
